@@ -1,15 +1,15 @@
 from itertools import count
 from math import factorial
 
-def fibo_gen():
+def fact():
     for el in count(1):
         yield factorial(el)
 
-gen = fibo_gen()
+gen = fact()
 x = 0
-for i in gen:
+for el in gen:
     if x < 15:
-        print(i)
+        print(el)
         x += 1
     else:
         break
